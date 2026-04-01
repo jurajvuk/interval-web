@@ -1,8 +1,55 @@
-<section id="services" class="relative z-10 max-w-7xl mx-auto px-6 py-10 lg:py-16">
-    <div>
+---
+import ServiceCard from './ServiceCard.astro';
+
+const services = [
+  {
+    title: 'Automation',
+    description: 'Fully automated control and supervision of marine and industrial equipment for vessels of all types — patrol ships, ferries, yachts, cargo freighters, and tankers.',
+    href: '/services/automation',
+  },
+  {
+    title: 'INTERMAR V2.0',
+    description: "Modern ship's integrated automation system built in compliance with CRS classification rules, providing E0 unattended engine room notation.",
+    href: '/services/intermar',
+  },
+  {
+    title: 'Electrical Cabinet Manufacturing',
+    description: 'Design and manufacturing of electrical distribution switchboards — Siemens SIVACON S8 franchise, fully customizable to your specifications.',
+    href: '/services/cabinets',
+  },
+  {
+    title: 'Power Management System',
+    description: 'INTEMAR PMS — autonomous power management system for vessels of all sizes, ensuring reliable electrical distribution at sea.',
+    href: '/services/pms',
+  },
+  {
+    title: 'Project Management & Engineering',
+    description: 'Design, consulting, and supervision in electrical engineering and naval architecture — from concept to delivery.',
+    href: '/services/engineering',
+  },
+  {
+    title: 'Installation & Commissioning',
+    description: 'Skilled electricians and engineers providing on-site installation, testing, and commissioning for marine and industrial systems.',
+    href: '/services/commissioning',
+  },
+];
+---
+<section id="services" class="relative z-10 w-full mx-auto px-30 py-10 lg:py-16 bg-brand-black-soft">
+    <div class="w-lg">
         <div class="font-mono text-[0.72rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3 animate-fade-up [animation-delay:0.2s]">
             <span class="w-9 h-0.5 bg-brand-orange"></span>
             What we do
         </div>
+        <div class="text-5xl font-heading font-bold">
+            <h1>Engineering Services</h1>
+        </div>
+        <div class="my-5 text-brand-gray text-base leading-relaxed">
+            <p>Full-cycle electrical engineering — from design and manufacturing to installation, commissioning, and long-term maintenance.</p>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-10">
+        {services.map((service) => (
+            <ServiceCard {...service} />
+        ))}
     </div>
 </section>
