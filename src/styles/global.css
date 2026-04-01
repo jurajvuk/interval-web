@@ -1,1 +1,101 @@
+/* ─────────────────────────────────────────────
+   src/assets/main.css
+   Tailwind base + Interval custom theme
+   ───────────────────────────────────────────── */
+
 @import "tailwindcss";
+
+/*
+  CUSTOM THEME
+  These extend Tailwind so you can use classes like:
+    bg-brand-orange, text-brand-white, font-mono, etc.
+  
+  In Tailwind v4, we use @theme to define custom tokens.
+*/
+
+@theme {
+  /* ── Colors ── */
+  --color-brand-black: #0d0d0d;
+  --color-brand-black-soft: #141414;
+  --color-brand-dark: #1a1a1a;
+  --color-brand-dark-mid: #222222;
+  --color-brand-dark-elevated: #2a2a2a;
+
+  --color-brand-orange: #e8872b;
+  --color-brand-orange-bright: #f0993d;
+
+  --color-brand-white: #f5f2ed;
+  --color-brand-gray: #8a8580;
+  --color-brand-gray-light: #b5afa8;
+  --color-brand-gray-dark: #555250;
+
+  /* ── Fonts ── */
+  --font-heading: 'Archivo', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/*
+  BASE LAYER
+  Global defaults applied to HTML elements directly.
+*/
+
+
+@layer base {
+  body {
+    @apply bg-brand-black text-brand-white font-heading antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Subtle noise texture overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+/*
+  ANIMATIONS
+  Reusable keyframes for the site.
+*/
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes triPulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.6; }
+}
+
+@keyframes scrollPulse {
+  0%   { opacity: 1; transform: scaleY(1); }
+  50%  { opacity: 0.3; transform: scaleY(0.5); transform-origin: top; }
+  100% { opacity: 1; transform: scaleY(1); }
+}
+
+/*
+  UTILITY CLASSES
+  Custom utilities for animation delays, etc.
+*/
+
+@utility animate-fade-up {
+  animation: fadeUp 0.7s forwards;
+  opacity: 0;
+}
+
+@utility animate-tri-pulse {
+  animation: triPulse 4s ease-in-out infinite;
+}
+
+@utility animate-scroll-pulse {
+  animation: scrollPulse 2s infinite;
+}

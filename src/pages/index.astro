@@ -1,10 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import "../styles/global.css";
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+
+
+const pageTitle = "Interval";
 ---
 
-<Layout>
-	<div class="flex justify-center items-center h-screen">
-		<h2 class="text-2xl font-bold mb-4">Welcome to Astro!</h2>
-	</div>
+<Layout pageTitle={pageTitle}>
+	<Hero />
+	<Services />
 </Layout>
+
+
+	
+
