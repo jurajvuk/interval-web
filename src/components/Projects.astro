@@ -1,0 +1,89 @@
+---
+/*
+  Projects.astro
+  Portfolio grid with image tiles and hover overlays.
+  
+  TAILWIND LEARNING NOTES:
+  - "aspect-[4/3]" sets aspect ratio (like CSS aspect-ratio: 4/3)
+  - "object-cover" makes images fill their container without distortion
+  - "group/tile" is a NAMED group — useful when you have nested groups
+    so child elements know which parent to react to
+  - "group-hover/tile:opacity-100" = show overlay only when this specific tile is hovered
+  - "grayscale-50 brightness-[0.65]" = CSS filters as Tailwind classes
+*/
+import ProjectCard from './ProjectCard.astro';
+
+import trenton from "../assets/usns-trenton.webp"; 
+import hershel from "../assets/woody-hershel-home.webp";
+import carson from "../assets/carson-city-home.webp";
+import yuma from "../assets/yuma-home.webp";
+import tsSenj from "../assets/ts-meline-home.webp";
+import rstPellet from "../assets/rst-pellet-home.webp";
+import cofed from "../assets/cofed-featured-image.webp";
+import lenac from "../assets/dok-5-home.webp";
+
+const projects = [
+  {
+    title: 'USS Hershel Williams',
+    category: 'Marine · US Navy',
+    image: hershel,
+  },
+  {
+    title: 'USNS Trenton',
+    category: 'Marine · US Navy',
+    image: trenton,
+  },
+  {
+    title: 'USNS Carson City',
+    category: 'Marine · US Navy',
+    image: carson,
+  },
+  {
+    title: 'USNS Yuma',
+    category: 'Marine · US Navy',
+    image: yuma,
+  },
+  {
+    title: 'HOPS TS Senj',
+    category: 'Industrial · Energy',
+    image: tsSenj,
+  },
+  {
+    title: 'RST Pellet',
+    category: 'Industrial · Manufacturing',
+    image: rstPellet,
+  },
+  {
+    title: 'COFED MPV Congo',
+    category: 'Marine · Cargo',
+    image: cofed,
+  },
+  {
+    title: 'Dry Dock — Viktor Lenac',
+    category: 'Industrial · Shipyard',
+    image: lenac,
+  },
+];
+---
+
+<section id="projects" class="relative z-1 py-16 lg:py-28 px-6 lg:px-32 bg-brand-black-soft border-t border-brand-orange/5">
+    <div>
+        <div class="font-mono text-[0.72rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3 animate-fade-up [animation-delay:0.2s]">
+            <span class="w-9 h-0.5 bg-brand-orange"></span>
+            Portfolio
+        </div>
+        <div>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6 animate-fade-up [animation-delay:0.4s]">
+                Selected Projects
+            </h2>
+            <p class="text-brand-gray text-base leading-relaxed max-w-lg mb-10 animate-fade-up [animation-delay:0.6s]">
+                Marine and industrial projects delivered for clients worldwide — from US Navy vessels to industrial facilities across Europe and Africa.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 mt-10">
+                {projects.map((project) => (
+                    <ProjectCard {...project} />
+                ))}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,95 @@
+---
+/*
+  About.astro
+  Company info section with animated triangle visual + values grid.
+  
+  TAILWIND LEARNING NOTES:
+  - "grid grid-cols-2" = CSS grid with 2 columns
+  - "max-lg:grid-cols-1" = on screens below 'lg', switch to 1 column
+  - "clip-path" needs arbitrary value syntax: [clip-path:polygon(...)]
+  - "group" on parent + "group-hover:" on child = child reacts to parent hover
+*/
+---
+
+<div id="about" class="grid grid-cols-1 lg:grid-cols-2 min-h-140">
+
+  <!-- LEFT: Animated triangle visual -->
+  <div class="relative overflow-hidden flex items-center justify-center p-16 bg-brand-dark min-h-75">
+
+    <!-- Main triangle -->
+    <div class="relative w-60 h-60">
+      <!-- Outer filled triangle -->
+      <div class="absolute inset-0 [clip-path:polygon(50%_0%,0%_100%,100%_100%)] bg-linear-to-b from-brand-orange to-brand-orange/40 animate-tri-pulse"></div>
+      <!-- Inner cutout (creates the outline effect) -->
+      <div class="absolute inset-6.25 [clip-path:polygon(50%_0%,0%_100%,100%_100%)] bg-brand-dark"></div>
+      <!-- Core glow -->
+      <div class="absolute inset-13.75 [clip-path:polygon(50%_0%,0%_100%,100%_100%)] bg-brand-orange/15 animate-tri-pulse [animation-delay:1s]"></div>
+    </div>
+
+    <!-- Floating decorative triangles -->
+    <div class="absolute top-[15%] right-[10%] w-30 h-30 [clip-path:polygon(50%_0%,0%_100%,100%_100%)] bg-brand-orange opacity-4 animate-[floatTriangle_8s_ease-in-out_infinite]"></div>
+    <div class="absolute bottom-[20%] left-[12%] w-20 h-20 [clip-path:polygon(50%_0%,0%_100%,100%_100%)] bg-brand-orange opacity-4 animate-[floatTriangle_6s_ease-in-out_2s_infinite]"></div>
+  </div>
+
+  <!-- RIGHT: Text content -->
+  <div class="flex flex-col justify-center p-8 lg:p-16 xl:p-20">
+
+    <!-- Section tag -->
+    <div class="font-mono text-[1.25rem] text-brand-orange tracking-[4px] uppercase mb-4 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      About Interval
+    </div>
+
+    <!-- Title -->
+    <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold mb-4 leading-tight -tracking-tight">
+      Built on Precision,<br />Driven by Innovation
+    </h2>
+
+    <!-- Description paragraphs -->
+    <p class="text-brand-gray leading-relaxed text-[0.95rem] mb-6">
+      Founded in 1996 in Rijeka, Croatia, Interval grew from an electrical
+      motor maintenance workshop into a full-service engineering partner.
+      We develop inventive, tailor-made solutions — treating every
+      requirement as a challenge, not a problem.
+    </p>
+
+    <p class="text-brand-gray leading-relaxed text-[0.95rem] mb-6">
+      Our vision focuses on automated smart solutions using established
+      digital technologies, with a commitment to hybrid vessel solutions
+      as part of the eco-friendly evolution of the shipping industry.
+    </p>
+
+    <!-- Values grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
+
+      <div class="group p-4 border-l-2 border-brand-orange/12 bg-brand-orange/2 hover:border-brand-orange hover:bg-brand-orange/4 transition-all">
+        <strong class="block text-sm mb-1 text-brand-white">Optimal Solutions</strong>
+        <span class="text-xs text-brand-gray leading-normal">Meeting all contract and regulatory requirements</span>
+      </div>
+
+      <div class="group p-4 border-l-2 border-brand-orange/12 bg-brand-orange/2 hover:border-brand-orange hover:bg-brand-orange/4 transition-all">
+        <strong class="block text-sm mb-1 text-brand-white">High-Level Service</strong>
+        <span class="text-xs text-brand-gray leading-normal">Before, during, and after delivery</span>
+      </div>
+
+      <div class="group p-4 border-l-2 border-brand-orange/12 bg-brand-orange/2 hover:border-brand-orange hover:bg-brand-orange/4 transition-all">
+        <strong class="block text-sm mb-1 text-brand-white">Competitive Edge</strong>
+        <span class="text-xs text-brand-gray leading-normal">Solutions that set our clients apart</span>
+      </div>
+
+      <div class="group p-4 border-l-2 border-brand-orange/12 bg-brand-orange/2 hover:border-brand-orange hover:bg-brand-orange/4 transition-all">
+        <strong class="block text-sm mb-1 text-brand-white">Long-Term Partnership</strong>
+        <span class="text-xs text-brand-gray leading-normal">Built on honesty and integrity</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Float animation for decorative triangles -->
+<style>
+  @keyframes floatTriangle {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+  }
+</style>

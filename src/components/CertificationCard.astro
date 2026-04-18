@@ -1,0 +1,36 @@
+---
+interface Certs {
+    code: string;
+    title: string;
+    description: string;
+}
+
+const { code, title, description } = Astro.props;
+---
+<div class="group relative bg-brand-black p-8 text-center transition-colors hover:bg-brand-dark">
+        
+    <!-- Code label -->
+    <span class="block font-mono text-[0.65rem] text-brand-orange tracking-[3px] uppercase mb-4">
+        {code}
+    </span>
+
+    <!-- Title -->
+    <h4 class="text-sm font-bold mb-2 leading-snug">
+        {title}
+    </h4>
+
+    <!-- Description -->
+    <p class="text-xs text-brand-gray leading-normal">
+        {description}
+    </p>
+
+    <!-- Triangle accent on hover (pure CSS, no extra elements needed) -->
+    <div class="absolute bottom-3 left-1/2 -translate-x-1/2
+                w-0 h-0
+                border-l-[6px] border-l-transparent
+                border-r-[6px] border-r-transparent
+                border-b-[6px] border-b-brand-orange
+                opacity-0 transition-opacity
+                group-hover:opacity-100">
+    </div>
+</div>

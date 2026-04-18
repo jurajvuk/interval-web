@@ -1,0 +1,246 @@
+---
+/*
+  src/pages/services/automation.astro
+  Individual service page for Automation.
+
+  ASTRO ROUTING:
+  This file lives at src/pages/services/automation.astro
+  which automatically creates the route /services/automation
+  No router config needed — Astro uses file-based routing.
+*/
+
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+---
+
+<ServiceLayout
+  title="Automation"
+  subtitle="Tailor-made automation and visualization systems for marine and industrial applications, built with industry-proven Siemens technology."
+>
+
+  <!-- INTRO -->
+  <div class="mb-16">
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-6">
+      Marine & Industrial Control Systems
+    </h2>
+    <p class="text-brand-gray leading-relaxed mb-6">
+      We offer tailor-made, modern automation and visualization systems compliant
+      with major class societies in the marine industry. Utilizing equipment from
+      the worldwide recognized brand Siemens, our automation systems are proven
+      to be efficient and reliable in various industries under the most difficult
+      circumstances.
+    </p>
+    <p class="text-brand-gray leading-relaxed">
+      Our automation department provides fully automated control and supervision
+      of inland, offshore, and marine equipment for a wide range of facilities
+      and vessel types — from patrol ships and ferries, through luxury yachts,
+      to cargo freighters and oil tankers.
+    </p>
+  </div>
+
+  <!-- CAPABILITIES -->
+  <div class="mb-16">
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Capabilities
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-brand-orange/5">
+      
+      <div class="bg-brand-black p-8">
+        <h3 class="text-lg font-bold mb-3">Custom PLC Solutions</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          We fulfill all customer requests — from initial design ideas to three
+          pole diagrams, software and hardware development. We primarily use
+          Siemens PLC CPUs and HMI, but can adapt to other manufacturers when
+          the project demands it.
+        </p>
+      </div>
+
+      <div class="bg-brand-black p-8">
+        <h3 class="text-lg font-bold mb-3">Legacy System Upgrades</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          We have extensive experience modifying existing machine control cabinets
+          with older PLC equipment, pairing legacy PLCs with modern controllers
+          to extend system life and improve performance.
+        </p>
+      </div>
+
+      <div class="bg-brand-black p-8">
+        <h3 class="text-lg font-bold mb-3">SCADA & Visualization</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          WinCC-based HMI/SCADA software allows tailor-made mimic diagrams
+          designed for the best possible operator experience. Web browser
+          features give operators remote control via web technologies.
+        </p>
+      </div>
+
+      <div class="bg-brand-black p-8">
+        <h3 class="text-lg font-bold mb-3">System Integration</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          Our systems offer high openness towards other ship systems with
+          capability for integration using standardized industry protocols
+          employed by the most recognized automation brands worldwide.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- INTERMAR HIGHLIGHT -->
+  <div class="mb-16 p-8 md:p-12 border border-brand-orange/10 relative overflow-hidden">
+    
+    <!-- Decorative triangle -->
+    <div class="absolute -right-8 -top-8 w-[160px] h-[160px] [clip-path:polygon(50%_0%,0%_100%,100%_100%)] bg-brand-orange opacity-[0.04]"></div>
+    
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-4 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Featured Product
+    </div>
+    
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-4">
+      INTERMAR V2.0
+    </h2>
+    
+    <p class="text-brand-gray leading-relaxed mb-6">
+      INTERMAR v2.0 is our modern ship's integrated automation system (IAS),
+      built in compliance with CRS classification society rules and regulations.
+      It provides a solution for class notation E0 (unattended engine room) ships.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+      <div class="border-l-2 border-brand-orange/20 pl-4">
+        <h4 class="text-sm font-bold mb-1">Siemens TIA Portal</h4>
+        <p class="text-xs text-brand-gray leading-relaxed">
+          Development framework and simulation tools significantly reduce
+          time to market, decreasing costs and wait times.
+        </p>
+      </div>
+      <div class="border-l-2 border-brand-orange/20 pl-4">
+        <h4 class="text-sm font-bold mb-1">System Redundancy</h4>
+        <p class="text-xs text-brand-gray leading-relaxed">
+          Profinet-based ethernet ring ensures system and cable redundancy
+          with duplicated main PLC controllers and redundant SCADA.
+        </p>
+      </div>
+      <div class="border-l-2 border-brand-orange/20 pl-4">
+        <h4 class="text-sm font-bold mb-1">Self-Diagnostics</h4>
+        <p class="text-xs text-brand-gray leading-relaxed">
+          System health monitoring with self-diagnostic software diagnoses
+          and alarms upon component failure, providing accurate real-time info.
+        </p>
+      </div>
+      <div class="border-l-2 border-brand-orange/20 pl-4">
+        <h4 class="text-sm font-bold mb-1">Functional Safety</h4>
+        <p class="text-xs text-brand-gray leading-relaxed">
+          Supports fail-safe modules and PROFISAFE communication protocol,
+          certified in accordance with IEC 61508.
+        </p>
+      </div>
+    </div>
+
+    <a href="/services/intermar"
+       class="inline-flex items-center gap-2 bg-brand-orange text-brand-black px-6 py-3 font-bold text-sm tracking-wider uppercase hover:bg-brand-orange-bright transition-all">
+      Learn More About INTERMAR →
+    </a>
+  </div>
+
+  <!-- KEY FEATURES -->
+  <div class="mb-16">
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Key Features
+    </div>
+
+    <div class="space-y-4">
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5">01</span>
+        <div>
+          <h4 class="font-bold mb-1">PROFINET Real-Time Communication</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Designed for demanding, deterministic exchange and display of
+            time-critical process data using industry-standard protocols.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5">02</span>
+        <div>
+          <h4 class="font-bold mb-1">Long-Term Spare Part Availability</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Equipped with well-established Siemens devices used across
+            various industries, ensuring long-term availability of spare parts.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5">03</span>
+        <div>
+          <h4 class="font-bold mb-1">Tank Level Monitoring</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Precise monitoring of filling levels in tanks with appropriate
+            sensors selected for specific mediums of varying densities and
+            chemical properties.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5">04</span>
+        <div>
+          <h4 class="font-bold mb-1">Extended Alarm System (EAS V2.0)</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            For unattended engine rooms — includes Engineers Call System (ECS)
+            and Engineer Safety System (ESS) for continuous monitoring.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TECHNOLOGY PARTNERS -->
+  <div>
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Technology We Use
+    </div>
+    <div class="flex flex-wrap gap-6">
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">
+        Siemens TIA Portal
+      </div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">
+        Siemens PLC / HMI
+      </div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">
+        WinCC SCADA
+      </div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">
+        PROFINET / PROFIBUS
+      </div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">
+        PROFISAFE
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED SERVICES (fills the "related" slot in ServiceLayout) -->
+  <Fragment slot="related">
+    <a href="/services/intermar" class="group block bg-brand-black-soft p-8 border border-brand-orange/5 hover:border-brand-orange/15 transition-all">
+      <div class="font-mono text-[0.65rem] text-brand-gray-dark tracking-[2px] mb-4">02</div>
+      <h3 class="text-lg font-bold mb-2 group-hover:text-brand-orange transition-colors">INTERMAR V2.0</h3>
+      <p class="text-sm text-brand-gray">Integrated ship automation system for E0 class notation.</p>
+    </a>
+    <a href="/services/pms" class="group block bg-brand-black-soft p-8 border border-brand-orange/5 hover:border-brand-orange/15 transition-all">
+      <div class="font-mono text-[0.65rem] text-brand-gray-dark tracking-[2px] mb-4">04</div>
+      <h3 class="text-lg font-bold mb-2 group-hover:text-brand-orange transition-colors">Power Management</h3>
+      <p class="text-sm text-brand-gray">Autonomous power management for vessels of all sizes.</p>
+    </a>
+    <a href="/services/commissioning" class="group block bg-brand-black-soft p-8 border border-brand-orange/5 hover:border-brand-orange/15 transition-all">
+      <div class="font-mono text-[0.65rem] text-brand-gray-dark tracking-[2px] mb-4">06</div>
+      <h3 class="text-lg font-bold mb-2 group-hover:text-brand-orange transition-colors">Installation & Commissioning</h3>
+      <p class="text-sm text-brand-gray">On-site installation, testing, and commissioning services.</p>
+    </a>
+  </Fragment>
+
+</ServiceLayout>

@@ -1,0 +1,91 @@
+---
+/*
+  ServiceLayout.astro
+  Reusable layout wrapper for individual service pages.
+  Provides a hero banner, content area, and CTA at the bottom.
+  
+  Each service page passes its own title, subtitle, and content via slots.
+*/
+
+import Layout from './Layout.astro';
+
+interface Props {
+  title: string;
+  subtitle: string;
+  pageTitle?: string;
+}
+
+const { title, subtitle, pageTitle } = Astro.props;
+---
+
+<Layout pageTitle={pageTitle || `${title} | Interval`}>
+
+  <!-- SERVICE HERO BANNER -->
+  <section class="relative pt-20 pb-20 px-6 lg:px-32 overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-black to-brand-dark"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_70%_50%,rgba(232,135,43,0.06),transparent)]"></div>
+
+    <!-- Diagonal lines -->
+    <div class="absolute -right-[10%] top-0 w-1/2 h-full opacity-[0.03] bg-[repeating-linear-gradient(-25deg,transparent,transparent_50px,#e8872b_50px,#e8872b_51px)]"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <!-- Breadcrumb -->
+      <div class="font-mono text-[0.68rem] text-brand-gray tracking-[3px] uppercase mb-6 flex items-center gap-2">
+        <a href="/" class="hover:text-brand-orange transition-colors">Home</a>
+        <span class="text-brand-gray-dark">/</span>
+        <a href="/#services" class="hover:text-brand-orange transition-colors">Services</a>
+        <span class="text-brand-gray-dark">/</span>
+        <span class="text-brand-orange">{title}</span>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.05] -tracking-wide mb-4">
+        {title}
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed max-w-[640px]">
+        {subtitle}
+      </p>
+
+      <!-- Orange accent line -->
+      <div class="w-20 h-1 bg-brand-orange mt-8"></div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT (each service page fills this) -->
+  <section class="py-16 lg:py-24 px-6 lg:px-32 bg-brand-black-soft border-t border-brand-orange/5">
+    <div class="max-w-5xl mx-auto">
+      <slot />
+    </div>
+  </section>
+
+  <!-- RELATED SERVICES -->
+  <section class="py-16 px-6 lg:px-32 border-t border-brand-orange/5">
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-8 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Other Services
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <slot name="related" />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative text-center py-20 px-8 overflow-hidden border-t border-brand-orange/5">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(232,135,43,0.05),transparent_65%)]"></div>
+    <h2 class="relative text-2xl md:text-3xl font-extrabold mb-3">
+      Interested in our {title} services?
+    </h2>
+    <p class="relative text-brand-gray text-base mb-10">
+      Let's discuss your project requirements.
+    </p>
+    <a href="mailto:interval@interval-ri.hr"
+       class="relative inline-flex items-center gap-2 bg-brand-orange text-brand-black px-8 py-4 font-bold text-sm tracking-wider uppercase hover:bg-brand-orange-bright hover:-translate-y-0.5 hover:shadow-[0_10px_35px_rgba(232,135,43,0.35)] transition-all">
+      Get in Touch →
+    </a>
+  </section>
+
+</Layout>

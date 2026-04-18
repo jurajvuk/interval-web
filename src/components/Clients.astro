@@ -1,0 +1,46 @@
+---
+/*
+  Clients.astro
+  Row of client/partner names.
+  
+  Later you can replace the text with actual logo images
+  by putting them in public/logos/ and using <img> tags.
+*/
+
+const clients = [
+  'Brodosplit',
+  'Viktor Lenac',
+  'Scam Marine',
+  'CIMOS',
+  'Energy Pellets',
+  'Mil. Sealift Command',
+  'Siemens',
+  'Schneider Electric',
+  'ABB'
+];
+---
+
+<section class="relative z-1 py-16 lg:py-28 px-6 lg:px-32 bg-brand-black-soft border-t border-brand-orange/5">
+  
+  <div class="text-center">
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-4 flex items-center gap-3 justify-center">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Trusted By
+    </div>
+    <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold mb-10 leading-tight -tracking-tight">
+      Clients & Partners
+    </h2>
+  </div>
+
+  <!-- Client names strip -->
+  <div class="flex flex-wrap justify-center gap-0">
+    {clients.map((name) => (
+      <div class="font-mono text-[0.72rem] tracking-[2.5px] text-brand-gray-dark uppercase
+                  px-8 py-5 border border-transparent text-center
+                  transition-all
+                  hover:text-brand-orange hover:border-brand-orange/12 hover:bg-brand-orange/3">
+        {name}
+      </div>
+    ))}
+  </div>
+</section>

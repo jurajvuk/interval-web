@@ -1,0 +1,63 @@
+---
+import CertificationCard from "./CertificationCard.astro";
+
+/*
+  Certifications.astro
+  Grid of certification/partnership badges.
+  
+  TAILWIND LEARNING NOTE:
+  - The small triangle on hover uses CSS borders trick:
+    border-l, border-r transparent + border-b colored = triangle
+  - "after:" pseudo-element classes let you create decorative
+    elements without extra HTML
+*/
+
+const certs = [
+  {
+    code: '/// ISO',
+    title: 'ISO 9001:2015',
+    description: 'Certified quality management system',
+  },
+  {
+    code: '/// BV',
+    title: 'Bureau Veritas',
+    description: 'Marine classification recognition',
+  },
+  {
+    code: '/// SIE',
+    title: 'Siemens Sinamics',
+    description: 'Certified for G120, G130, G150 VFDs',
+  },
+  {
+    code: '/// S8',
+    title: 'Siemens Sivacon S8',
+    description: 'Franchise for cabinet design & build',
+  },
+  {
+    code: '/// PRO',
+    title: 'Procentec',
+    description: 'Profinet & Profibus network certified',
+  },
+];
+---
+<section id="certs" class="relative z-1 py-16 lg:py-28 px-6 lg:px-32 border-t border-brand-orange/5">
+    <div class="w-3xl">
+        <div class="font-mono text-[0.72rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3 animate-fade-up [animation-delay:0.2s]">
+            <span class="w-9 h-0.5 bg-brand-orange"></span>
+            Credentials
+        </div>
+        <div class="text-5xl font-heading font-bold">
+            <h1>Certifications & Partnerships</h1>
+        </div>
+        <div class="my-5 text-brand-gray text-base leading-relaxed">
+            <p>
+                Industry-recognized certifications and technology partnerships backing every project.
+            </p>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-10">
+        {certs.map((cert) => (
+            <CertificationCard {...cert} />
+        ))}
+    </div>
+</section>

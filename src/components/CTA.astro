@@ -1,0 +1,42 @@
+---
+/*
+  CTA.astro
+  Call-to-action band before the footer.
+  
+  TAILWIND LEARNING NOTE:
+  - Multiple background layers use stacked divs since
+    Tailwind can't easily do multiple radial-gradients in one class
+  - The decorative triangles use clip-path just like in the About section
+*/
+---
+
+<section id="contact" class="relative text-center py-24 px-8 overflow-hidden border-t border-brand-orange/5">
+
+  <!-- Background glow -->
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(232,135,43,0.05),transparent_65%)]"></div>
+
+  <!-- Decorative triangle left -->
+  <div class="absolute left-[8%] top-[20%] w-50 h-50 [clip-path:polygon(50%_0%,0%_100%,100%_100%)] bg-brand-orange opacity-[0.03]"></div>
+
+  <!-- Decorative triangle right (flipped) -->
+  <div class="absolute right-[12%] bottom-[15%] w-35 h-35 [clip-path:polygon(50%_0%,0%_100%,100%_100%)] bg-brand-orange opacity-[0.03] rotate-180"></div>
+
+  <!-- Content -->
+  <h2 class="relative text-2xl md:text-3xl lg:text-4xl font-extrabold mb-3">
+    Need an Electrical Engineering Partner?
+  </h2>
+
+  <p class="relative text-brand-gray text-base mb-10">
+    Let's discuss your project requirements.
+  </p>
+
+  <a href="mailto:interval@interval-ri.hr"
+     class="relative inline-flex items-center gap-2
+            bg-brand-orange text-brand-black
+            px-8 py-4 font-bold text-sm tracking-wider uppercase
+            hover:bg-brand-orange-bright hover:-translate-y-0.5
+            hover:shadow-[0_10px_35px_rgba(232,135,43,0.35)]
+            transition-all">
+    Get in Touch →
+  </a>
+</section>
