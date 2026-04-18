@@ -1,0 +1,215 @@
+---
+/*
+  src/pages/services/commissioning.astro
+  Individual service page for Installation & Commissioning.
+*/
+
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+---
+
+<ServiceLayout
+  title="Installation & Commissioning"
+  subtitle="Highly qualified field engineers and skilled technicians delivering on-site installation, testing, and commissioning for marine and industrial systems."
+  pageTitle="Installation & Commissioning | Interval"
+>
+
+  <!-- INTRO -->
+  <div class="mb-16">
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-6">
+      From Workshop to On-Site
+    </h2>
+    <p class="text-brand-gray leading-relaxed mb-6">
+      Besides automation and electrical engineering design, we provide
+      comprehensive installation and commissioning services. Interval
+      employs a group of highly qualified field engineers and skilled
+      technicians whose knowledge, experience, and training qualifies
+      them for resolving even the most complex problems and equipment
+      malfunctions.
+    </p>
+    <p class="text-brand-gray leading-relaxed">
+      Our team works across marine and industrial environments worldwide,
+      delivering reliable on-site services from cable installation through
+      to full system commissioning and handover.
+    </p>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="mb-16">
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Installation Services
+    </div>
+
+    <div class="space-y-4">
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5 shrink-0">01</span>
+        <div>
+          <h4 class="font-bold mb-1">Cable Routes</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Complete cable route installation including cable trays,
+            cable passages, cable penetrations, and supporting infrastructure.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5 shrink-0">02</span>
+        <div>
+          <h4 class="font-bold mb-1">Cable Pulling & Termination</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Professional cable pulling, routing, and termination services
+            for power, control, and communication cables across all vessel
+            and facility types.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5 shrink-0">03</span>
+        <div>
+          <h4 class="font-bold mb-1">Equipment Mounting</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Installation and mounting of switchboards, cabinets, control
+            panels, sensors, and all associated electrical equipment.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5 shrink-0">04</span>
+        <div>
+          <h4 class="font-bold mb-1">System Commissioning & Testing</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Complete commissioning services including functional testing,
+            loop checks, system integration verification, and performance
+            validation.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="mb-16">
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Team Certifications
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-brand-orange/5">
+
+      <div class="bg-brand-black p-8">
+        <div class="font-mono text-brand-orange text-[0.65rem] tracking-[2px] mb-4">/// SINAMICS</div>
+        <h3 class="text-base font-bold mb-2">Siemens VFD Certified</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          Our engineers are certified for commissioning and service of
+          Sinamics G120, G130, and G150 variable frequency drives.
+        </p>
+      </div>
+
+      <div class="bg-brand-black p-8">
+        <div class="font-mono text-brand-orange text-[0.65rem] tracking-[2px] mb-4">/// NETWORK</div>
+        <h3 class="text-base font-bold mb-2">Procentec Network Certified</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          Our engineers are certified for commissioning and inspecting
+          PROFINET and PROFIBUS industrial communication networks.
+        </p>
+      </div>
+
+      <div class="bg-brand-black p-8">
+        <div class="font-mono text-brand-orange text-[0.65rem] tracking-[2px] mb-4">/// BV</div>
+        <h3 class="text-base font-bold mb-2">Bureau Veritas Recognized</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          Company-wide Bureau Veritas recognition for marine electrical
+          installation and commissioning work.
+        </p>
+      </div>
+
+      <div class="bg-brand-black p-8">
+        <div class="font-mono text-brand-orange text-[0.65rem] tracking-[2px] mb-4">/// ISO</div>
+        <h3 class="text-base font-bold mb-2">ISO 9001:2015</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          All installation and commissioning work follows our certified
+          ISO 9001:2015 quality management system procedures.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- EQUIPMENT HIGHLIGHT -->
+  <div class="mb-16 p-8 md:p-12 border border-brand-orange/10 relative overflow-hidden">
+
+    <div class="absolute -right-8 -top-8 w-[160px] h-[160px] [clip-path:polygon(50%_0%,0%_100%,100%_100%)] bg-brand-orange opacity-[0.04]"></div>
+
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-4 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Our Expertise
+    </div>
+
+    <h2 class="text-2xl font-extrabold mb-6">
+      Complex Problem Resolution
+    </h2>
+
+    <p class="text-brand-gray leading-relaxed mb-6">
+      Our field engineers and technicians are qualified for resolving even
+      the most complex problems and equipment malfunctions. With experience
+      across naval vessels, commercial ships, and industrial facilities
+      worldwide, our team brings proven expertise to every project.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="border-l-2 border-brand-orange/20 pl-4">
+        <h4 class="text-sm font-bold mb-1">Marine Vessels</h4>
+        <p class="text-xs text-brand-gray leading-relaxed">
+          Navy ships, cargo vessels, ferries, yachts, and specialized
+          marine platforms.
+        </p>
+      </div>
+      <div class="border-l-2 border-brand-orange/20 pl-4">
+        <h4 class="text-sm font-bold mb-1">Industrial Facilities</h4>
+        <p class="text-xs text-brand-gray leading-relaxed">
+          Manufacturing plants, energy facilities, shipyards, and
+          processing installations.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- EQUIPMENT -->
+  <div>
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Equipment & Tools
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">Sinamics G120</div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">Sinamics G130</div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">Sinamics G150</div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">PROFINET</div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">PROFIBUS</div>
+    </div>
+  </div>
+
+  <!-- RELATED SERVICES -->
+  <Fragment slot="related">
+    <a href="/services/automation" class="group block bg-brand-black-soft p-8 border border-brand-orange/5 hover:border-brand-orange/15 transition-all">
+      <div class="font-mono text-[0.65rem] text-brand-gray-dark tracking-[2px] mb-4">01</div>
+      <h3 class="text-lg font-bold mb-2 group-hover:text-brand-orange transition-colors">Automation</h3>
+      <p class="text-sm text-brand-gray">Custom automation and visualization systems for marine and industrial applications.</p>
+    </a>
+    <a href="/services/cabinets" class="group block bg-brand-black-soft p-8 border border-brand-orange/5 hover:border-brand-orange/15 transition-all">
+      <div class="font-mono text-[0.65rem] text-brand-gray-dark tracking-[2px] mb-4">03</div>
+      <h3 class="text-lg font-bold mb-2 group-hover:text-brand-orange transition-colors">Electrical Cabinets</h3>
+      <p class="text-sm text-brand-gray">SIVACON S8 switchboard design and manufacturing.</p>
+    </a>
+    <a href="/services/engineering" class="group block bg-brand-black-soft p-8 border border-brand-orange/5 hover:border-brand-orange/15 transition-all">
+      <div class="font-mono text-[0.65rem] text-brand-gray-dark tracking-[2px] mb-4">05</div>
+      <h3 class="text-lg font-bold mb-2 group-hover:text-brand-orange transition-colors">Project Management</h3>
+      <p class="text-sm text-brand-gray">Design, consulting, and supervision in electrical engineering.</p>
+    </a>
+  </Fragment>
+
+</ServiceLayout>

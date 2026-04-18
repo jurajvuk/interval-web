@@ -2,28 +2,46 @@
 import Logo from "../assets/logo.svg";
 
 ---
-<nav class="flex items-center justify-between w-full">
-    <div><Logo class="w-32 h-auto"/></div>
+<!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 h-19 flex items-center justify-between px-6 lg:px-20 bg-brand-black/90 backdrop-blur-xl border-b border-brand-orange/6">
+    
+    <a href="/" class="flex items-center">
+        <Logo class="w-32 h-auto"/>
+    </a>
+
+    <!-- Desktop links -->
     <ul class="hidden md:flex items-center gap-8">
-        <li>
-            <a href="/about/" class="text-brand-gray-light hover:text-brand-orange font-semibold  tracking-[1.8px] text-xs
-            transition-colors uppercase relative after:absolute after:bottom-0 py-2 after:left-0 after:w-0 after:h-0.5 after:bg-brand-orange after:transition-all hover:after:w-full">About</a>
-        </li>
-        <li>
-            <a href="/services/" class="text-brand-gray-light hover:text-brand-orange font-semibold  tracking-[1.8px] text-xs
-            transition-colors uppercase relative after:absolute after:bottom-0 py-2 after:left-0 after:w-0 after:h-0.5 after:bg-brand-orange after:transition-all hover:after:w-full">Services</a>
-        </li>
-        <li>
-            <a href="/projects/" class="text-brand-gray-light hover:text-brand-orange font-semibold  tracking-[1.8px] text-xs
-            transition-colors uppercase relative after:absolute after:bottom-0 py-2 after:left-0 after:w-0 after:h-0.5 after:bg-brand-orange after:transition-all hover:after:w-full">Projects</a>
-        </li>
-        <li>
-            <a href="/credentials/" class="text-brand-gray-light hover:text-brand-orange font-semibold  tracking-[1.8px] text-xs
-            transition-colors uppercase relative after:absolute after:bottom-0 py-2 after:left-0 after:w-0 after:h-0.5 after:bg-brand-orange after:transition-all hover:after:w-full">Credentials</a>
-        </li>
-        <li>
-            <a href="/contact/" class="text-brand-gray-light hover:text-brand-orange font-semibold  tracking-[1.8px] text-xs
-            transition-colors uppercase relative after:absolute after:bottom-0 py-2 after:left-0 after:w-0 after:h-0.5 after:bg-brand-orange after:transition-all hover:after:w-full">Contact us</a>
-        </li>
+      <li>
+        <a href="/#services" class="text-brand-gray-light text-xs font-semibold tracking-[1.8px] uppercase hover:text-brand-orange transition-colors duration-300 relative after:absolute after:-bottom-1.5 after:left-0 after:w-0 after:h-0.5 after:bg-brand-orange after:transition-all after:duration-300 hover:after:w-full">
+          Services
+        </a>
+      </li>
+      <li>
+        <a href="/#about" class="text-brand-gray-light text-xs font-semibold tracking-[1.8px] uppercase hover:text-brand-orange transition-colors duration-300 relative after:absolute after:-bottom-1.5 after:left-0 after:w-0 after:h-0.5 after:bg-brand-orange after:transition-all after:duration-300 hover:after:w-full">
+          About
+        </a>
+      </li>
+      <li>
+        <a href="/#projects" class="text-brand-gray-light text-xs font-semibold tracking-[1.8px] uppercase hover:text-brand-orange transition-colors duration-300 relative after:absolute after:-bottom-1.5 after:left-0 after:w-0 after:h-0.5 after:bg-brand-orange after:transition-all after:duration-300 hover:after:w-full">
+          Projects
+        </a>
+      </li>
+      <li>
+        <a href="#" class="font-mono text-[0.65rem] border border-brand-orange/30 px-2.5 py-1 text-brand-orange tracking-wider">
+          EN / HR
+        </a>
+      </li>
+      <li>
+        <a href="/contact" class="bg-brand-orange text-brand-black px-5 py-2 text-xs font-bold tracking-[1.5px] uppercase hover:bg-brand-orange-bright hover:shadow-[0_4px_20px_rgba(232,135,43,0.35)] transition-all">
+          Contact Us
+        </a>
+      </li>
     </ul>
-</nav>
+
+    <!-- Mobile hamburger -->
+    <button id="mobile-toggle" class="flex md:hidden flex-col gap-1.25 bg-transparent border-none cursor-pointer" aria-label="Menu">
+      <span class="w-6.5 h-0.5 bg-brand-white transition-all"></span>
+      <span class="w-6.5 h-0.5 bg-brand-white transition-all"></span>
+      <span class="w-6.5 h-0.5 bg-brand-white transition-all"></span>
+    </button>
+  </nav>

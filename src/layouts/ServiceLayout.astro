@@ -7,7 +7,7 @@
   Each service page passes its own title, subtitle, and content via slots.
 */
 
-import Layout from './Layout.astro';
+import BaseLayout from './BaseLayout.astro';
 
 interface Props {
   title: string;
@@ -18,46 +18,44 @@ interface Props {
 const { title, subtitle, pageTitle } = Astro.props;
 ---
 
-<Layout pageTitle={pageTitle || `${title} | Interval`}>
+<BaseLayout title={pageTitle || `${title} | Interval`}>
 
   <!-- SERVICE HERO BANNER -->
-  <section class="relative pt-20 pb-20 px-6 lg:px-32 overflow-hidden">
-
+  <section class="relative pt-40 pb-20 px-6 lg:px-32 overflow-hidden">
+    
     <!-- Background -->
     <div class="absolute inset-0 bg-gradient-to-br from-brand-black to-brand-dark"></div>
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_70%_50%,rgba(232,135,43,0.06),transparent)]"></div>
-
+    
     <!-- Diagonal lines -->
     <div class="absolute -right-[10%] top-0 w-1/2 h-full opacity-[0.03] bg-[repeating-linear-gradient(-25deg,transparent,transparent_50px,#e8872b_50px,#e8872b_51px)]"></div>
 
-    <div class="relative z-10 max-w-5xl mx-auto">
-      <!-- Breadcrumb -->
-      <div class="font-mono text-[0.68rem] text-brand-gray tracking-[3px] uppercase mb-6 flex items-center gap-2">
-        <a href="/" class="hover:text-brand-orange transition-colors">Home</a>
-        <span class="text-brand-gray-dark">/</span>
-        <a href="/#services" class="hover:text-brand-orange transition-colors">Services</a>
-        <span class="text-brand-gray-dark">/</span>
-        <span class="text-brand-orange">{title}</span>
-      </div>
-
-      <!-- Title -->
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.05] -tracking-wide mb-4">
-        {title}
-      </h1>
-
-      <!-- Subtitle -->
-      <p class="text-lg md:text-xl text-brand-gray leading-relaxed max-w-[640px]">
-        {subtitle}
-      </p>
-
-      <!-- Orange accent line -->
-      <div class="w-20 h-1 bg-brand-orange mt-8"></div>
+    <!-- Breadcrumb -->
+    <div class="relative z-10 font-mono text-[0.68rem] text-brand-gray tracking-[3px] uppercase mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-brand-orange transition-colors">Home</a>
+      <span class="text-brand-gray-dark">/</span>
+      <a href="/#services" class="hover:text-brand-orange transition-colors">Services</a>
+      <span class="text-brand-gray-dark">/</span>
+      <span class="text-brand-orange">{title}</span>
     </div>
+
+    <!-- Title -->
+    <h1 class="relative z-10 text-4xl md:text-5xl lg:text-6xl font-black leading-[1.05] -tracking-wide mb-4">
+      {title}
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="relative z-10 text-lg md:text-xl text-brand-gray leading-relaxed max-w-[640px]">
+      {subtitle}
+    </p>
+
+    <!-- Orange accent line -->
+    <div class="relative z-10 w-20 h-1 bg-brand-orange mt-8"></div>
   </section>
 
   <!-- MAIN CONTENT (each service page fills this) -->
   <section class="py-16 lg:py-24 px-6 lg:px-32 bg-brand-black-soft border-t border-brand-orange/5">
-    <div class="max-w-5xl mx-auto">
+    <div class="max-w-[900px] mx-auto">
       <slot />
     </div>
   </section>
@@ -88,4 +86,4 @@ const { title, subtitle, pageTitle } = Astro.props;
     </a>
   </section>
 
-</Layout>
+</BaseLayout>

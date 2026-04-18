@@ -1,0 +1,216 @@
+---
+/*
+  src/pages/services/pms.astro
+  Individual service page for Power Management System (INTEMAR PMS).
+*/
+
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+---
+
+<ServiceLayout
+  title="Power Management System"
+  subtitle="INTEMAR PMS — a modern autonomous power management system for vessels of all sizes, ensuring reliable and efficient power generation and distribution."
+  pageTitle="Power Management System | Interval"
+>
+
+  <!-- INTRO -->
+  <div class="mb-16">
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-6">
+      INTEMAR PMS
+    </h2>
+    <p class="text-brand-gray leading-relaxed mb-6">
+      INTEMAR PMS is a modern autonomous Power Management System for small to
+      larger vessels. We deliver high-quality, cost-effective, and flexible but
+      intuitive PMS solutions based on the most recognized genset control
+      manufacturers like Comap and Deif — providing our customers with reliable,
+      continuous, and efficient power supply.
+    </p>
+    <p class="text-brand-gray leading-relaxed">
+      The system controls the generation and distribution of power through the
+      ship to secure enough available power for a safe voyage. The operator can
+      optimize electric power plant dynamics for efficient fuel consumption.
+    </p>
+  </div>
+
+  <!-- KEY FEATURES -->
+  <div class="mb-16">
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Key Features
+    </div>
+
+    <div class="space-y-4">
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5 shrink-0">01</span>
+        <div>
+          <h4 class="font-bold mb-1">Load-Dependent Start-Stop</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Automatic starting and stopping of diesel generators based on
+            load demand and running hours, optimizing fuel consumption and
+            engine wear.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5 shrink-0">02</span>
+        <div>
+          <h4 class="font-bold mb-1">Autonomous Load Sharing</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Reliable regulation loops allow autonomous load sharing between
+            gensets in defined ratios, ensuring balanced and efficient power
+            distribution.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5 shrink-0">03</span>
+        <div>
+          <h4 class="font-bold mb-1">Blackout Prevention</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Function module that prevents blackout occurrence by tripping
+            unnecessary consumers when no available gensets can be synchronized.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5 shrink-0">04</span>
+        <div>
+          <h4 class="font-bold mb-1">Heavy Duty Consumer Support</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Dedicated support for heavy duty consumers, ensuring large
+            loads are managed safely without destabilizing the power network.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5 shrink-0">05</span>
+        <div>
+          <h4 class="font-bold mb-1">Flexible Power Management Modes</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Flexible absolute or relative approach to power management,
+            allowing optimization for fuel cost reduction depending on
+            particular application requirements.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SYSTEM CAPABILITIES -->
+  <div class="mb-16">
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      System Capabilities
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-brand-orange/5">
+
+      <div class="bg-brand-black p-8">
+        <div class="font-mono text-brand-orange text-[0.65rem] tracking-[2px] mb-4">/// ECU</div>
+        <h3 class="text-base font-bold mb-2">Wide Engine Support</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          Wide support of engines with ECU (Electronic Control Unit),
+          compatible with major engine manufacturers and control systems.
+        </p>
+      </div>
+
+      <div class="bg-brand-black p-8">
+        <div class="font-mono text-brand-orange text-[0.65rem] tracking-[2px] mb-4">/// HMI</div>
+        <h3 class="text-base font-bold mb-2">Multiple HMI Options</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          Wide range of available HMI devices in 5", 8", 13", and 18"
+          sizes with intuitive mimic diagrams designed for quick
+          operator reaction times.
+        </p>
+      </div>
+
+      <div class="bg-brand-black p-8">
+        <div class="font-mono text-brand-orange text-[0.65rem] tracking-[2px] mb-4">/// I/O</div>
+        <h3 class="text-base font-bold mb-2">Configurable I/O</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          Configurable inputs and outputs to satisfy various project
+          requirements and vessel-specific configurations.
+        </p>
+      </div>
+
+      <div class="bg-brand-black p-8">
+        <div class="font-mono text-brand-orange text-[0.65rem] tracking-[2px] mb-4">/// INT</div>
+        <h3 class="text-base font-bold mb-2">Easy Integration</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          Easily integrated into INTEMAR v2.0 or third-party automation
+          systems using Modbus TCP and Modbus RTU communication protocols.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- INTEGRATION HIGHLIGHT -->
+  <div class="mb-16 p-8 md:p-12 border border-brand-orange/10 relative overflow-hidden">
+
+    <div class="absolute -right-8 -top-8 w-[160px] h-[160px] [clip-path:polygon(50%_0%,0%_100%,100%_100%)] bg-brand-orange opacity-[0.04]"></div>
+
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-4 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Seamless Integration
+    </div>
+
+    <h2 class="text-2xl font-extrabold mb-4">
+      INTEMAR V2.0 Compatible
+    </h2>
+
+    <p class="text-brand-gray leading-relaxed mb-6">
+      The system integrates seamlessly with our INTEMAR v2.0 automation system,
+      offering end-users ease of control and monitoring from main control
+      stations onboard. Full monitoring and control of the entire PMS system
+      is available from the ship's automation system in a fully integrated
+      solution.
+    </p>
+
+    <a href="/services/intermar"
+       class="inline-flex items-center gap-2 bg-brand-orange text-brand-black px-6 py-3 font-bold text-sm tracking-wider uppercase hover:bg-brand-orange-bright transition-all">
+      Learn More About INTERMAR →
+    </a>
+  </div>
+
+  <!-- TECHNOLOGY -->
+  <div>
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Technology Partners
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">Comap</div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">Deif</div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">Modbus TCP</div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">Modbus RTU</div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">Siemens</div>
+    </div>
+  </div>
+
+  <!-- RELATED SERVICES -->
+  <Fragment slot="related">
+    <a href="/services/automation" class="group block bg-brand-black-soft p-8 border border-brand-orange/5 hover:border-brand-orange/15 transition-all">
+      <div class="font-mono text-[0.65rem] text-brand-gray-dark tracking-[2px] mb-4">01</div>
+      <h3 class="text-lg font-bold mb-2 group-hover:text-brand-orange transition-colors">Automation</h3>
+      <p class="text-sm text-brand-gray">Custom automation and visualization systems for marine and industrial applications.</p>
+    </a>
+    <a href="/services/intermar" class="group block bg-brand-black-soft p-8 border border-brand-orange/5 hover:border-brand-orange/15 transition-all">
+      <div class="font-mono text-[0.65rem] text-brand-gray-dark tracking-[2px] mb-4">02</div>
+      <h3 class="text-lg font-bold mb-2 group-hover:text-brand-orange transition-colors">INTERMAR V2.0</h3>
+      <p class="text-sm text-brand-gray">Integrated ship automation system for E0 class notation.</p>
+    </a>
+    <a href="/services/cabinets" class="group block bg-brand-black-soft p-8 border border-brand-orange/5 hover:border-brand-orange/15 transition-all">
+      <div class="font-mono text-[0.65rem] text-brand-gray-dark tracking-[2px] mb-4">03</div>
+      <h3 class="text-lg font-bold mb-2 group-hover:text-brand-orange transition-colors">Electrical Cabinets</h3>
+      <p class="text-sm text-brand-gray">SIVACON S8 switchboard design and manufacturing.</p>
+    </a>
+  </Fragment>
+
+</ServiceLayout>

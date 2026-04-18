@@ -1,0 +1,260 @@
+---
+/*
+  src/pages/services/cabinets.astro
+  Individual service page for Electrical Cabinet Manufacturing.
+*/
+
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import { Image } from 'astro:assets';
+import sivacon_image from "../../assets/switchboard-workshop-1920.webp";
+
+---
+
+<ServiceLayout
+  title="Electrical Cabinet Manufacturing"
+  subtitle="Custom-designed electrical distribution switchboards and automation cabinets — Siemens SIVACON S8 franchise partner."
+  pageTitle="Electrical Cabinet Manufacturing | Interval"
+>
+
+  <!-- INTRO -->
+  <div class="mb-16">
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-6">
+      Designed Around Your Requirements
+    </h2>
+    <p class="text-brand-gray leading-relaxed mb-6">
+      In the electric distribution area of our services, our goal is to be
+      recognized within the industry as designers and manufacturers of highly
+      customizable and flexible solutions. Every cabinet design starts with
+      collaboration between us and our clients, where specific needs and
+      requests are established as a frame within which a solution is developed.
+    </p>
+    <p class="text-brand-gray leading-relaxed">
+      We can provide electrical switchboards, cabinets, and counters outfitted
+      with equipment from various brands as the customer requires. Our
+      proprietary solutions always include equipment from the most recognized
+      brands in electrical switchboard and automation gear — Siemens and
+      Schneider Electric.
+    </p>
+  </div>
+
+  <!-- SIVACON S8 HIGHLIGHT -->
+  <div class="mb-16 p-8 md:p-12 border border-brand-orange/10 relative overflow-hidden">
+
+    <div class="absolute -right-8 -top-8 w-[160px] h-[160px] [clip-path:polygon(50%_0%,0%_100%,100%_100%)] bg-brand-orange opacity-[0.04]"></div>
+
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-4 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Siemens Franchise
+    </div>
+
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-4">
+      SIVACON S8 Partner
+    </h2>
+
+    <p class="text-brand-gray leading-relaxed mb-6">
+      Interval holds a Siemens SIVACON S8 franchise for designing and building
+      electrical cabinets according to the Sivacon standard. This partnership
+      ensures our cabinets meet the highest international quality and safety
+      standards, backed by one of the world's leading electrical engineering
+      brands.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+      <div class="border-l-2 border-brand-orange/20 pl-4">
+        <h4 class="text-sm font-bold mb-1">Standardized Quality</h4>
+        <p class="text-xs text-brand-gray leading-relaxed">
+          Built according to Sivacon S8 standards with type-tested
+          assemblies ensuring consistent quality and safety.
+        </p>
+      </div>
+      <div class="border-l-2 border-brand-orange/20 pl-4">
+        <h4 class="text-sm font-bold mb-1">Flexible Configuration</h4>
+        <p class="text-xs text-brand-gray leading-relaxed">
+          Modular system that allows custom configurations to match
+          specific project requirements and space constraints.
+        </p>
+      </div>
+      <div class="border-l-2 border-brand-orange/20 pl-4">
+        <h4 class="text-sm font-bold mb-1">Global Support</h4>
+        <p class="text-xs text-brand-gray leading-relaxed">
+          Backed by Siemens' worldwide service network for spare parts,
+          technical support, and long-term maintenance.
+        </p>
+      </div>
+      <div class="border-l-2 border-brand-orange/20 pl-4">
+        <h4 class="text-sm font-bold mb-1">Proven Reliability</h4>
+        <p class="text-xs text-brand-gray leading-relaxed">
+          SIVACON S8 is deployed in demanding environments worldwide,
+          from marine vessels to heavy industrial facilities.
+        </p>
+      </div>
+    </div>
+    <Image 
+      src={sivacon_image} 
+      alt="SIVACON S8 switchboard assembly in our workshop"
+      widths={[480, 960, 1920]}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 900px"
+      format="webp"
+      quality={80}
+    />
+  </div>
+
+  <!-- PRODUCT RANGE -->
+  <div class="mb-16">
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      What We Manufacture
+    </div>
+
+    <div class="space-y-4">
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5 shrink-0">01</span>
+        <div>
+          <h4 class="font-bold mb-1">Electrical Distribution Switchboards</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Main and secondary distribution boards for power distribution
+            in marine and industrial applications, custom designed to project
+            specifications.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5 shrink-0">02</span>
+        <div>
+          <h4 class="font-bold mb-1">Automation System Cabinets</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Cabinets and counters housing PLC controllers, I/O field devices,
+            and automation components for complete control system integration.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5 shrink-0">03</span>
+        <div>
+          <h4 class="font-bold mb-1">Low-Voltage Switchboards</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            All types of low-voltage switchboards with built-in microprocessors
+            and programmable controllers, equipped with components from
+            reliable brand name manufacturers.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start p-6 bg-brand-dark/50 border border-brand-orange/5 hover:border-brand-orange/15 transition-colors">
+        <span class="font-mono text-brand-orange text-sm mt-0.5 shrink-0">04</span>
+        <div>
+          <h4 class="font-bold mb-1">Control & Monitoring Panels</h4>
+          <p class="text-sm text-brand-gray leading-relaxed">
+            Control and monitoring switchboards for specialized applications
+            including engine room panels, cargo system controls, and
+            process monitoring stations.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- OUR APPROACH -->
+  <div class="mb-16">
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Our Approach
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-brand-orange/5">
+
+      <div class="bg-brand-black p-8">
+        <div class="font-mono text-brand-orange text-[0.65rem] tracking-[2px] mb-4">/// DESIGN</div>
+        <h3 class="text-base font-bold mb-2">Collaborative Design</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          Every project begins with close collaboration with the client.
+          Specific needs and requirements are established as the framework
+          within which optimal solutions are developed.
+        </p>
+      </div>
+
+      <div class="bg-brand-black p-8">
+        <div class="font-mono text-brand-orange text-[0.65rem] tracking-[2px] mb-4">/// BUILD</div>
+        <h3 class="text-base font-bold mb-2">Precision Manufacturing</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          Our workshop produces each cabinet to exact specifications,
+          with rigorous quality control at every stage from component
+          selection to final assembly and testing.
+        </p>
+      </div>
+
+      <div class="bg-brand-black p-8">
+        <div class="font-mono text-brand-orange text-[0.65rem] tracking-[2px] mb-4">/// TEST</div>
+        <h3 class="text-base font-bold mb-2">Quality Assurance</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          Every cabinet undergoes comprehensive testing before delivery,
+          meeting our ISO 9001:2015 quality management standards and
+          customer-specific requirements.
+        </p>
+      </div>
+
+      <div class="bg-brand-black p-8">
+        <div class="font-mono text-brand-orange text-[0.65rem] tracking-[2px] mb-4">/// FLEX</div>
+        <h3 class="text-base font-bold mb-2">Multi-Brand Flexibility</h3>
+        <p class="text-sm text-brand-gray leading-relaxed">
+          While our proprietary solutions use Siemens and Schneider Electric,
+          we can outfit cabinets with equipment from any brand the customer
+          requires.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WHO WE SERVE -->
+  <div>
+    <div class="font-mono text-[0.68rem] text-brand-orange tracking-[4px] uppercase mb-6 flex items-center gap-3">
+      <span class="w-5 h-0.5 bg-brand-orange"></span>
+      Industries We Serve
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">
+        Shipyards
+      </div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">
+        Navy
+      </div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">
+        Ship Owners
+      </div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">
+        Industrial Facilities
+      </div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">
+        Energy Sector
+      </div>
+      <div class="font-mono text-sm text-brand-gray-dark tracking-wider uppercase px-6 py-4 border border-brand-orange/5 hover:border-brand-orange/15 hover:text-brand-gray-light transition-all">
+        Manufacturing
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED SERVICES -->
+  <Fragment slot="related">
+    <a href="/services/automation" class="group block bg-brand-black-soft p-8 border border-brand-orange/5 hover:border-brand-orange/15 transition-all">
+      <div class="font-mono text-[0.65rem] text-brand-gray-dark tracking-[2px] mb-4">01</div>
+      <h3 class="text-lg font-bold mb-2 group-hover:text-brand-orange transition-colors">Automation</h3>
+      <p class="text-sm text-brand-gray">Custom automation and visualization systems for marine and industrial applications.</p>
+    </a>
+    <a href="/services/pms" class="group block bg-brand-black-soft p-8 border border-brand-orange/5 hover:border-brand-orange/15 transition-all">
+      <div class="font-mono text-[0.65rem] text-brand-gray-dark tracking-[2px] mb-4">04</div>
+      <h3 class="text-lg font-bold mb-2 group-hover:text-brand-orange transition-colors">Power Management</h3>
+      <p class="text-sm text-brand-gray">Autonomous power management system for vessels of all sizes.</p>
+    </a>
+    <a href="/services/commissioning" class="group block bg-brand-black-soft p-8 border border-brand-orange/5 hover:border-brand-orange/15 transition-all">
+      <div class="font-mono text-[0.65rem] text-brand-gray-dark tracking-[2px] mb-4">06</div>
+      <h3 class="text-lg font-bold mb-2 group-hover:text-brand-orange transition-colors">Installation & Commissioning</h3>
+      <p class="text-sm text-brand-gray">On-site installation, testing, and commissioning services.</p>
+    </a>
+  </Fragment>
+
+</ServiceLayout>
